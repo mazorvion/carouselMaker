@@ -1,0 +1,92 @@
+/* ==========================================================================
+   GENERATED FILE - do not edit by hand.
+   Source: https://github.com/cardtree-bulkbeings/shared-design-system
+   Ref: main @ 9b048c32b4e44d66a8036de7dab95d75ec50b767
+   Source file: project/tokens.json
+   Source sha256 (canonical JSON): 8e13c42c2f6311b9bdb503f89a03a4cdd907b3b5e611202b0b6e8e8968c5edb8
+   Regenerate: npm run sync:tokens
+   Consumed by: engine/double.css for .b-thedouble-company and .b-thedouble-founder
+   ========================================================================== */
+
+:is(.b-thedouble-company, .b-thedouble-founder) {
+  /* Color (light theme) */
+  --ds-ground-2: #EEEBE3;
+  --ds-ground: #F6F4EF;
+  --ds-paper: #FFFFFF;
+  --ds-ink: #15172B;
+  --ds-ink-2: #57596D;
+  --ds-ink-3: #6E7084;
+  --ds-ink-4: #9A9CAD;
+  --ds-on-ink: #FFFFFF;
+  --ds-fill: rgba(21,23,43,.05);
+  --ds-fill-2: rgba(21,23,43,.08);
+  --ds-fill-3: rgba(21,23,43,.14);
+  --ds-line: rgba(21,23,43,.10);
+  --ds-line-2: rgba(21,23,43,.18);
+  --ds-cobalt: #2F43F2;
+  --ds-cobalt-deep: #2132BB;
+  --ds-deep: #151B55;
+  --ds-accent: #2F43F2;
+  --ds-on-deep: #EEF0FF;
+  --ds-on-deep-2: #B6BCEA;
+  --ds-on-cobalt-2: #DDE2FF;
+  --ds-accent-on-deep: #A9B6FF;
+  --ds-grape: #6A2CF5;
+  --ds-knowledge: #6A2CF5;
+  --ds-knowledge-soft: #E9E1FF;
+  --ds-bubblegum: #FF4FAE;
+  --ds-personality: #FF4FAE;
+  --ds-personality-soft: #FFDDEF;
+  --ds-sky: #16B0FA;
+  --ds-voice: #16B0FA;
+  --ds-voice-soft: #D5EEFB;
+  --ds-channels: #2F43F2;
+  --ds-channels-soft: #DEE2FF;
+  --ds-tangerine: #FF7417;
+  --ds-actions: #FF7417;
+  --ds-actions-soft: #FFE4D1;
+  --ds-live: #D4F53C;
+  --ds-live-soft: #EDF7C6;
+  --ds-live-text: #15172B;
+  --ds-warn: #FFC53D;
+  --ds-warn-soft: #FFF1CC;
+  --ds-warn-text: #7A5200;
+  --ds-err: #E5484D;
+  --ds-err-soft: #FDE6E7;
+  --ds-err-text: #B4232A;
+  --ds-paused: #9A9CAD;
+  --ds-paused-text: #57596D;
+  --ds-busy: #2F43F2;
+
+  /* Spacing (4px grid) */
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-6: 24px;
+  --ds-space-10: 40px;
+  --ds-space-18: 72px;
+  --ds-space-32: 128px;
+
+  /* Radius */
+  --ds-radius-square: 2px;
+  --ds-radius-6: 6px;
+  --ds-radius-10: 10px;
+  --ds-radius-icon: 13px;
+  --ds-radius-14: 14px;
+  --ds-radius-22: 22px;
+  --ds-radius-28: 28px;
+  --ds-radius-32: 32px;
+  --ds-radius-44: 44px;
+  --ds-radius-full: 999px;
+
+  /* Shadow */
+  --ds-shadow-pop: 0 1px 2px rgba(21,23,43,0.06), 0 18px 48px -14px rgba(21,23,43,0.28);
+
+  /* Type families (fonts stay loaded from Google Fonts in the brand YAML) */
+  --ds-font-display: 'Funnel Display', Arial, system-ui, sans-serif;
+  --ds-font-human: Newsreader, Georgia, serif;
+  --ds-font-body: Geist, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ds-font-mono: 'Geist Mono', ui-monospace, Menlo, monospace;
+  --ds-font-pixel: Silkscreen, 'Courier New', monospace;
+}

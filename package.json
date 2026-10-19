@@ -8,6 +8,8 @@
     "studio": "node server.mjs",
     "export": "node scripts/export.mjs",
     "check": "node scripts/check.mjs",
+    "check:tokens": "node scripts/sync-design-tokens.mjs --check",
+    "sync:tokens": "node scripts/sync-design-tokens.mjs",
     "docs": "node scripts/library-doc.mjs"
   },
   "dependencies": {

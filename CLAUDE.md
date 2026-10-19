@@ -87,5 +87,7 @@ Several posts = several files. Do them one after another, then export and check 
 | `engine/slides.css`, `kits.css` | base styles; `engine/skins/{bold,calm,quest}.css` = design languages |
 | `engine/system.css`, `covers.css`, `editorial.css` | shared layers loaded last (rhythm, cover styles, editorial slides) |
 | `brands/<id>/brand.yaml` | tokens, fonts, colour presets, imagery rules |
+| `brands/_shared/thedouble/` | generated shared tokens for Company + Founder (`npm run sync:tokens`, see `docs/DESIGN-TOKENS.md`) |
 | `formats/F*.yaml` | format recipes + scaffolds |
 | `scripts/export.mjs`, `check.mjs`, `library-doc.mjs` | `npm run export` · `npm run check` · `npm run docs` |
+| `scripts/sync-design-tokens.mjs` | sync shared design tokens · `npm run sync:tokens` · `npm run check:tokens` |

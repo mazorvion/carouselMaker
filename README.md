@@ -28,7 +28,17 @@ Then read, in order: **`CLAUDE.md`** (how to build carousels, the full workflow)
 npm run check  -- posts/<handle>/<file>.yaml    # swipe rules + clipped/off-slide text; must exit 0
 npm run export -- posts/<handle>/<file>.yaml    # PNGs → out/<handle>/<file>/
 npm run docs                                    # regenerate docs/SLIDE-LIBRARY.md
+npm run sync:tokens                             # pull The Double tokens from the shared design system
+npm run check:tokens                            # fail if the vendored shared tokens are stale
 ```
+
+### Shared design system
+
+Company and Founder consume tokens from
+[`cardtree-bulkbeings/shared-design-system`](https://github.com/cardtree-bulkbeings/shared-design-system)
+through a generated, scoped `--ds-*` layer. The snapshot is committed, so normal rendering needs no
+network. To update it, run `npm run sync:tokens`; see `docs/DESIGN-TOKENS.md` for details, overrides and
+what is intentionally not synced.
 
 ### Make a carousel
 
@@ -43,5 +53,6 @@ Or open the folder in Claude Code / Codex and say "run this project" or "build a
 
 ## Layout
 
-`posts/` post YAMLs · `brands/` per-account tokens + skins · `formats/` format recipes · `engine/` renderer ·
-`studio/` editor · `assets/`, `image-assets/` imagery · `scripts/` check/export · `out/` generated PNGs (git-ignored).
+`posts/` post YAMLs · `brands/` per-account tokens + skins · `brands/_shared/` generated shared tokens ·
+`formats/` format recipes · `engine/` renderer · `studio/` editor · `assets/`, `image-assets/` imagery ·
+`scripts/` check/export/sync · `out/` generated PNGs (git-ignored).

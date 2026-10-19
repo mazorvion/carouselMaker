@@ -301,6 +301,8 @@ Switching a cover's style never drops the cover's own words or image.
 
 Source: `DoubleDesignSystem.html` (+ `_files/`). Assets sorted into `assets/brand/` (logos, washes, textures,
 stages, objects, scenes, characters). Shared layer: `engine/double.css`. Agent Bro is not The Double; it keeps "the lab".
+Values in that layer come from the shared repo via `npm run sync:tokens` (`brands/_shared/thedouble/`); see
+`docs/DESIGN-TOKENS.md` for the update workflow and what stays local.
 
 - **Type:** Funnel Display 700 (−3.5%) headlines · ONE Newsreader italic phrase per headline (`*phrase*`) ·
   Geist body · Geist Mono labels (+10%) · Silkscreen status chips (`tag:`).

@@ -9,32 +9,35 @@ logo: assets/brand/logos/mark-ink.svg
 emphasis: serif             # *word* → Newsreader italic (engine/double.css)
 design: bold                # engine/skins/bold.css (layout) + brands/thedouble-founder/skin.css
 skin: brands/thedouble-founder/skin.css
+# Shared design-system tokens, generated from cardtree-bulkbeings/shared-design-system.
+# Regenerate with `npm run sync:tokens`; values below may reference its --ds-* variables.
+shared: brands/_shared/thedouble/design-tokens.css
 rhythm: capabilities        # inner slides take knowledge → personality → voice → channels → actions
 face: image-assets/character.png   # sticker on the slide's one bold block; set `face: false` on a slide to hide
 fonts:
   - https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;600;700;800&family=Newsreader:ital,opsz,wght@1,6..72,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Silkscreen&family=Caveat:wght@700&display=block
 
 tokens:
-  ground: "#FFFFFF"
-  paper: "#FFFFFF"
-  ink: "#15172B"
-  muted: "#57596D"
-  faint: "#6E7084"
-  line: "rgba(21,23,43,.10)"
-  chip: "#EEF0FF"
-  accent: "#2F43F2"          # cobalt
-  accent-ink: "#FFFFFF"
-  accent-deep: "#2132BB"
-  hi: "#2F43F2"
-  hi-soft: "#DEE2FF"
-  glow: "rgba(47,67,242,.14)"
-  deep: "#151B55"
-  deep-ink: "#FFFFFF"
-  tray: "#2F43F2"
-  live: "#D4F53C"
-  good: "#2F43F2"
-  bad: "#E5484D"
-  note: "#2F43F2"
+  ground: "#FFFFFF"              # Founder-specific white notebook ground
+  paper: "var(--ds-paper)"
+  ink: "var(--ds-ink)"
+  muted: "var(--ds-ink-2)"
+  faint: "var(--ds-ink-3)"
+  line: "var(--ds-line)"
+  chip: "#EEF0FF"                # Founder-specific chip tint
+  accent: "var(--ds-cobalt)"     # cobalt
+  accent-ink: "var(--ds-on-ink)"
+  accent-deep: "var(--ds-cobalt-deep)"
+  hi: "var(--ds-cobalt)"
+  hi-soft: "var(--ds-channels-soft)"
+  glow: "rgba(47,67,242,.14)"    # Founder-specific accent glow
+  deep: "var(--ds-deep)"
+  deep-ink: "var(--ds-on-ink)"
+  tray: "var(--ds-cobalt)"
+  live: "var(--ds-live)"
+  good: "var(--ds-cobalt)"
+  bad: "var(--ds-err)"
+  note: "var(--ds-cobalt)"
   font-display: "'Funnel Display', 'Poppins', Arial, sans-serif"
   font-human: "'Newsreader', Georgia, serif"
   font-body: "'Geist', 'Inter', system-ui, sans-serif"

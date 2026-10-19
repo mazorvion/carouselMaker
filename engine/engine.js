@@ -31,6 +31,16 @@ export async function loadBrand(id) {
     document.head.appendChild(link);
     await loaded;
   }
+  // Optional shared design-system tokens (`shared:` in brand.yaml). Generated from the shared repo by
+  // scripts/sync-design-tokens.mjs; it defines the --ds-* variables consumed by engine/double.css.
+  for (const href of [].concat(brand.shared || []).filter(Boolean)) {
+    const url = href.startsWith('/') ? href : `/${href}`;
+    if (document.querySelector(`link[href="${url}"]`)) continue;
+    const link = Object.assign(document.createElement('link'), { rel: 'stylesheet', href: url });
+    const loaded = new Promise((r) => { link.onload = link.onerror = r; });
+    document.head.appendChild(link);
+    await loaded;
+  }
   // The design-system layer (engine/system.css) always loads after every skin so its rhythm rules win.
   for (const href of ['/engine/system.css', '/engine/covers.css', '/engine/editorial.css', '/engine/double.css']) {
     let sys = document.querySelector(`link[data-system="${href}"]`);

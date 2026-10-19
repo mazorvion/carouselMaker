@@ -9,30 +9,33 @@ logo: assets/brand/logos/lockup-ink.svg
 emphasis: serif              # *word* → Newsreader italic in cobalt (engine/double.css)
 design: calm                 # engine/skins/calm.css
 skin: brands/thedouble-company/skin.css
+# Shared design-system tokens, generated from cardtree-bulkbeings/shared-design-system.
+# Regenerate with `npm run sync:tokens`; values below may reference its --ds-* variables.
+shared: brands/_shared/thedouble/design-tokens.css
 fonts:
   - https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Silkscreen&family=Caveat:wght@700&display=block
 
 tokens:
-  ground: "#F6F4EF"          # linen
-  paper: "#FFFFFF"
-  ink: "#15172B"
-  muted: "#57596D"           # ink-2
-  faint: "#6E7084"           # ink-3
-  line: "rgba(21,23,43,.10)"
-  chip: "rgba(21,23,43,.05)"
-  accent: "#2F43F2"          # cobalt: the italic phrase, links, the brand
-  accent-ink: "#FFFFFF"
-  accent-deep: "#2132BB"
-  hi: "#DEE2FF"              # soft chip / marker fill (follows the post's capability via theme:)
-  hi-soft: "#EEF0FF"
+  ground: "var(--ds-ground)"          # linen (shared)
+  paper: "var(--ds-paper)"
+  ink: "var(--ds-ink)"
+  muted: "var(--ds-ink-2)"            # ink-2
+  faint: "var(--ds-ink-3)"            # ink-3
+  line: "var(--ds-line)"
+  chip: "var(--ds-fill)"
+  accent: "var(--ds-cobalt)"          # cobalt: the italic phrase, links, the brand
+  accent-ink: "var(--ds-on-ink)"
+  accent-deep: "var(--ds-cobalt-deep)"
+  hi: "var(--ds-channels-soft)"       # #DEE2FF: soft chip / marker fill (follows the post's capability via theme:)
+  hi-soft: "#EEF0FF"                  # Company-specific tint
   glow: "transparent"
-  deep: "#151B55"
-  deep-ink: "#FFFFFF"
-  tray: "#2F43F2"
-  live: "#D4F53C"            # lime = live, squares and chips only
-  good: "#2F43F2"
-  bad: "#E5484D"
-  note: "#2F43F2"
+  deep: "var(--ds-deep)"
+  deep-ink: "var(--ds-on-ink)"
+  tray: "var(--ds-cobalt)"
+  live: "var(--ds-live)"              # lime = live, squares and chips only
+  good: "var(--ds-cobalt)"
+  bad: "var(--ds-err)"
+  note: "var(--ds-cobalt)"
   font-display: "'Funnel Display', 'Inter Tight', Arial, sans-serif"
   font-human: "'Newsreader', Georgia, serif"
   font-body: "'Geist', 'Inter', system-ui, sans-serif"
@@ -41,9 +44,9 @@ tokens:
   font-hand: "'Caveat', cursive"
   display-weight: "700"
   display-track: "-0.035em"
-  r-card: "28px"              # radius-28
-  r-block: "32px"             # radius-32
-  r-tile: "13px"              # radius-icon
+  r-card: "var(--ds-radius-28)"   # shared radius-28
+  r-block: "var(--ds-radius-32)"  # shared radius-32
+  r-tile: "var(--ds-radius-icon)" # shared radius-icon
   shadow: "0 1px 2px rgba(0,0,0,.04), 0 16px 40px -16px rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.04)"
 
 palette:
